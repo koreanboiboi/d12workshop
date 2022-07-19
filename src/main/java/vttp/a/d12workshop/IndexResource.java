@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+
 @RequestMapping(path={"/indexresource","/indexresource.html"})
+
 public class IndexResource {
+
     @GetMapping(produces = {"text/html"})
     public String index(Model model){
         model.addAttribute("currTime", (new Date()).toString());
@@ -18,4 +21,5 @@ public class IndexResource {
         model.addAttribute("currHour", cal.get(Calendar.HOUR_OF_DAY));
         return "indexresource";
     }
+    
 }
