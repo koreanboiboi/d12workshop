@@ -8,5 +8,8 @@
 </head>
 <body>
     <h1>Welcome to My First ThymeLeaf Page</h1>
+    <h2>The current time is <span data-th-text="${currTime}"></span></h2>
+    <div data-th-if="${currHour le 11}">Good morning</div>
+    <div data-th-unless="${currHour le 11}">Good Afternoon</div>
 </body>
 </html>
